@@ -60,13 +60,13 @@ export default function NavigationBar() {
             /> */}
 
             <div className="flex items-center gap-0.5">
-              <Binoculars
+              {/* <Binoculars
                 className=" text-green-800"
                 size={30}
                 strokeWidth={1}
-              />
+              /> */}
               <span className="font-extrabold font-notoserif text-2xl text-green-800">
-                TNMM
+                TRUENORTH
               </span>
             </div>
           </Link>

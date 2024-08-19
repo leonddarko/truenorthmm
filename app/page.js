@@ -16,6 +16,42 @@ export default function Home() {
     { id: 11, image: "societegeneral.png" },
     { id: 12, image: "unilever.png" },
   ];
+
+  const services = [
+    {
+      id: 0,
+      subheading: "MediaPlus",
+      heading: "Media Monitoring",
+      list: [
+        "Always-On Monitoring Platform",
+        "AI-Enabled Real-time Reporting",
+        "21 Countries",
+        "1000+ Radio & TV Stations Monitored Daily",
+      ],
+    },
+    {
+      id: 1,
+      subheading: "MediaPlus",
+      heading: "Audience Measurement",
+      list: [
+        "Recall measurements",
+        "All media and product survey",
+        "TAM & RAM",
+        ".",
+      ],
+    },
+    {
+      id: 2,
+      subheading: "SoX",
+      heading: "Consumer Journeys",
+      list: [
+        "Smart Survey",
+        "BHT",
+        "Usage and Attitude Studies",
+        ".",
+      ],
+    },
+  ];
   return (
     <>
       <div
@@ -73,16 +109,33 @@ export default function Home() {
           Unlocking insights and driving growth through data-driven solutions.
         </h2>
 
-        <div className="columns-3 mt-10 gap-4">
-          <div className="rounded-t-md shadow-sm">
-            <Image
-              className=" rounded-t-md"
-              src="/assets/mediamonitoringcardimg.jpeg"
-              alt="Card Image"
-              width={1280}
-              height={640}
-            />
-          </div>
+        <div className="flex my-10 justify-center gap-4 flex-wrap">
+          {services.map((item) => (
+            <div
+              key={item.id}
+              className="rounded-xl shadow-md bg-[url('/assets/mediamonitoringbg.jpeg')] bg-no-repeat bg-cover bg-bottom"
+            >
+              {/* border border-l-green-800 */}
+              <div className="rounded-t-lg p-5 bg-white/85">
+                <span className="font-notoserif font-medium text-sm text-black">
+                  {item.subheading}
+                </span>
+                <h1 className=" font-notoserif font-black text-black text-3xl">
+                  {item.heading}
+                </h1>
+              </div>
+              <div className="p-5 bg-white rounded-b-lg border border-gray-200">
+                {item.list.map((item) => (
+                  <p
+                    key={item}
+                    className=" font-notosans font-medium text-black"
+                  >
+                    {item}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>

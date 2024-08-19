@@ -3,7 +3,7 @@ import NavigationBar from "./ui/navbar";
 import { noto_sans, noto_serif } from "./ui/fonts";
 
 export const metadata = {
-  title: "Maverick Research",
+  title: "True North",
   description: "We measure what Africans buy, watch and listen to",
 };
 
