@@ -4,7 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
 import Link from "next/link";
-import { Binoculars, EllipsisVertical } from "lucide-react";
+import { ChevronRight, EllipsisVertical } from "lucide-react";
 
 export default function NavigationBar() {
   const pathname = usePathname();
@@ -48,24 +48,26 @@ export default function NavigationBar() {
   ];
   return (
     <>
-      <div className=" w-full flex justify-between py-6 px-6 md:px-16 fixed top-0 bg-white z-[50] opacity-95 shadow-sm">
+      <div className=" w-full flex justify-between py-4 px-6 md:px-16 fixed top-0 bg-white z-[50] opacity-95 shadow-sm">
         {/* Logo and socials */}
         <div className="flex justify-start items-center gap-4">
           <Link href="/">
-            {/* <Image
-              src="/assets/maverickresearchlogo.png"
-              alt="Maverick Research Logo"
-              width={156}
-              height={134}
-            /> */}
-
             <div className="flex items-center gap-0.5">
-              {/* <Binoculars
-                className=" text-green-800"
-                size={30}
-                strokeWidth={1}
-              /> */}
-              <span className="font-extrabold font-notoserif text-2xl text-green-800">
+              <span className=" inline-block p-2 rounded-full shadow bg-zinc-200 hover:bg-zinc-300 hover:text-black">
+                <ChevronRight
+                  className=" text-black/50"
+                  size={20}
+                  strokeWidth={2}
+                />
+              </span>
+              <Image
+                src="/TrueNorthLogoSq1.jpg"
+                alt="Maverick Research Logo"
+                width={50}
+                height={50}
+              />
+
+              <span className="font-extrabold font-notoserif text-md text-black">
                 TRUENORTH
               </span>
             </div>
@@ -91,20 +93,13 @@ export default function NavigationBar() {
                 }`}
               />
               <Link href={item.path}>
-                <span className=" font-bold text-sm font-notosans text-zinc-500 hover:text-zinc-950 transition-all">
+                <span className=" font-bold text-sm font-notosans text-zinc-700 hover:text-zinc-950 transition-all">
                   {item.link}
                 </span>
               </Link>
             </div>
           ))}
           {/* Navigation Links */}
-          <span className=" inline-block p-2 rounded-full shadow md:hidden">
-            <EllipsisVertical
-              className=" text-black/50"
-              size={20}
-              strokeWidth={2}
-            />
-          </span>
         </div>
       </div>
       <Script src="https://kit.fontawesome.com/dcd356c426.js" />

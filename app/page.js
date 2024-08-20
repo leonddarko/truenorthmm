@@ -113,7 +113,7 @@ export default function Home() {
           {services.map((item) => (
             <div
               key={item.id}
-              className="rounded-xl shadow-md bg-[url('/assets/mediamonitoringbg.jpeg')] bg-no-repeat bg-cover bg-bottom"
+              className="rounded-xl shadow-md bg-[url('/assets/mediamonitoringbg.jpeg')] bg-no-repeat bg-cover bg-bottom border"
             >
               {/* border border-l-green-800 */}
               <div className="rounded-t-lg p-5 bg-white/85">
