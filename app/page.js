@@ -1,4 +1,6 @@
+import { CircleDot, Dot, Link2 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const brandImages = [
@@ -20,7 +22,6 @@ export default function Home() {
   const services = [
     {
       id: 0,
-      subheading: "MediaPlus",
       heading: "Media Monitoring",
       list: [
         "Always-On Monitoring Platform",
@@ -28,28 +29,29 @@ export default function Home() {
         "21 Countries",
         "1000+ Radio & TV Stations Monitored Daily",
       ],
+      link: "/media-monitoring",
     },
     {
       id: 1,
-      subheading: "MediaPlus",
       heading: "Audience Measurement",
       list: [
-        "Recall measurements",
-        "All media and product survey",
-        "TAM & RAM",
-        ".",
+        "Recall Measurements",
+        "All Media and Product survey (AMPS)",
+        "TV Audience Measurement (TAM)",
+        "Radio Audience Measurement (RAM)",
       ],
+      link: "/audience-measurement",
     },
     {
       id: 2,
-      subheading: "SoX",
       heading: "Consumer Journeys",
       list: [
         "Smart Survey",
-        "BHT",
+        "(CAPI, CATI & CAWI)",
+        "Brand Health Tracker (BHT)",
         "Usage and Attitude Studies",
-        ".",
       ],
+      link: "/consumer-journeys",
     },
   ];
   return (
@@ -60,10 +62,10 @@ export default function Home() {
       >
         <div>
           <h1 className="text-white font-notoserif text-5xl md:text-7xl font-bold max-w-3xl">
-            Monitoring. Evaluating and Measuring.
+            Monitoring. Evaluation and Measurement.
           </h1>
           <p className="text-white font-notosans font-medium">
-            We measure what Africans buy, watch and listen to.
+            Right on time, the first time.
           </p>
         </div>
       </div>
@@ -109,17 +111,14 @@ export default function Home() {
           Unlocking insights and driving growth through data-driven solutions.
         </h2>
 
-        <div className="flex my-10 justify-center gap-4 flex-wrap">
+        <div className="flex my-10 justify-center gap-6 flex-wrap">
           {services.map((item) => (
             <div
               key={item.id}
-              className="rounded-xl shadow-md bg-[url('/assets/mediamonitoringbg.jpeg')] bg-no-repeat bg-cover bg-bottom border"
+              className=" relative rounded-xl shadow-md bg-[url('/assets/mediamonitoringbg.jpeg')] bg-no-repeat bg-cover bg-bottom border"
             >
               {/* border border-l-green-800 */}
               <div className="rounded-t-lg p-5 bg-white/85">
-                <span className="font-notoserif font-medium text-sm text-black">
-                  {item.subheading}
-                </span>
                 <h1 className=" font-notoserif font-black text-black text-3xl">
                   {item.heading}
                 </h1>
@@ -133,6 +132,11 @@ export default function Home() {
                     {item}
                   </p>
                 ))}
+                <Link href={item.link}>
+                  <div className="absolute top-14 -left-3 p-2 rounded-full bg-white hover:bg-zinc-200 shadow -rotate-3">
+                    <Link2 size={20} className="text-green-800" />
+                  </div>
+                </Link>
               </div>
             </div>
           ))}
