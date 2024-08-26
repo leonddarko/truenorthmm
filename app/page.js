@@ -1,4 +1,4 @@
-import { CircleDot, Dot, Link2 } from "lucide-react";
+import { ChevronRight, CircleDot, Dot, Link2, MapPinCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -53,6 +53,29 @@ export default function Home() {
       ],
       link: "/consumer-journeys",
     },
+  ];
+
+  const coverage = [
+    { id: 0, country: "Benin" },
+    { id: 1, country: "Burkina Faso" },
+    { id: 2, country: "Cameroon" },
+    { id: 3, country: "Chad" },
+    { id: 4, country: "Congo" },
+    { id: 5, country: "Côte d'Ivoire" },
+    { id: 6, country: "Gambia" },
+    { id: 7, country: "Ghana" },
+    { id: 8, country: "Guinea" },
+    { id: 9, country: "Kenya" },
+    { id: 10, country: "Madagascar" },
+    { id: 11, country: "Mali" },
+    { id: 12, country: "Mauritania" },
+    { id: 13, country: "Niger" },
+    { id: 14, country: "Nigeria" },
+    { id: 15, country: "Senegal" },
+    { id: 16, country: "Sierra Leone" },
+    { id: 17, country: "Togo" },
+    { id: 18, country: "Uganda" },
+    { id: 19, country: "Zambia" },
   ];
   return (
     <>
@@ -133,11 +156,49 @@ export default function Home() {
                   </p>
                 ))}
                 <Link href={item.link}>
-                  <div className="absolute top-14 -left-3 p-2 rounded-full bg-white hover:bg-zinc-200 shadow -rotate-3">
+                  <div className="absolute top-5 -left-3 p-2 rounded-full bg-white hover:bg-zinc-200 shadow -rotate-3">
                     <Link2 size={20} className="text-green-800" />
                   </div>
                 </Link>
               </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="px-6 md:px-16 py-10">
+        <div className="flex justify-start items-center gap-3">
+          <div className="p-3 rounded-full bg-zinc-200 shadow">
+            {/* <div className="w-1.5 h-1.5 rounded-full bg-green-800 transition ease-in" /> */}
+            <MapPinCheck size={15} className="text-green-800" />
+          </div>
+          <span className="text-black font-notoserif font-bold">
+            Media Monitoring Coverage
+          </span>
+          <ChevronRight size={15} className="text-zinc-400" />
+        </div>
+        <div className="mt-5 flex flex-wrap justify-around items-center gap-5">
+          <h1 className=" font-notoserif font-bold text-4xl md:text-5xl text-black">
+            Our <br /> Media Monitoring
+            <br />
+            Footprint in Africa
+          </h1>
+          <Image
+            src="/assets/MapChart_Africa.png"
+            width={700}
+            height={700}
+            alt="Map of Africa"
+          />
+        </div>
+        <div className="my-5 flex flex-wrap justify-start items-center gap-5">
+          {coverage.map((item) => (
+            <div key={item.id} className="flex items-center gap-2">
+              <div className="p-2 rounded-full bg-zinc-200 shadow">
+                <div className="w-1 h-1 rounded-full bg-green-800 transition ease-in" />
+              </div>
+              <span className="text-black text-sm font-notosans font-medium">
+                {item.country}
+              </span>
             </div>
           ))}
         </div>

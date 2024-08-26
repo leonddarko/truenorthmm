@@ -16,11 +16,11 @@ export default function NavigationBar() {
     },
     {
       id: 1,
-      icon: "fab fab fa-facebook-f",
+      icon: "fab fa-instagram",
     },
     {
       id: 2,
-      icon: "fab fab fa-twitter",
+      icon: "fab fa-facebook-f",
     },
   ];
 
@@ -131,7 +131,7 @@ export default function NavigationBar() {
               </Link>
             </div>
           ))}
-          <Link href="/mmmreport">
+          <Link className="hidden md:inline-block" href="/mmmreport">
             <span className=" font-bold text-sm font-notosans text-green-700 hover:text-green-800 transition-all bg-zinc-100 hover:bg-zinc-200 px-3 py-2 rounded-full shadow flex items-center gap-2">
               MM Reports
               <FileSpreadsheet size={15} />

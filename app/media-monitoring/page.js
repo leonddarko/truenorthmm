@@ -60,7 +60,7 @@ export default function Page() {
           <h1 className="font-notoserif font-bold text-black/50 text-3xl md:text-5xl max-w-lg">
             Media Monitoring
           </h1>
-          <div className="my-10 flex justify-start gap-5">
+          <div className="my-10 flex flex-col md:flex-row justify-start gap-5">
             {capabilities.map((item) => (
               <div
                 key={item.id}

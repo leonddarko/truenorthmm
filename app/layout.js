@@ -4,8 +4,8 @@ import { noto_sans, noto_serif } from "./ui/fonts";
 import Footer from "./ui/footer";
 
 export const metadata = {
-  title: "True North",
-  description: "We measure what Africans buy, watch and listen to",
+  title: "True North Media Monitoring",
+  description: "Monitoring Evaluation and Measurement.",
 };
 
 export default function RootLayout({ children }) {

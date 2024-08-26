@@ -8,11 +8,11 @@ export default function Footer() {
     },
     {
       id: 1,
-      icon: "fab fab fa-facebook-f",
+      icon: "fab fa-instagram",
     },
     {
       id: 2,
-      icon: "fab fab fa-twitter",
+      icon: "fab fa-facebook-f",
     },
   ];
   return (
