@@ -37,22 +37,18 @@ export default function Page() {
 
           <div className="my-5 max-w-4xl font-notosans font-normal text-black/70">
             <p className="mb-2.5">
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Velit neque
-              diam lobortis accumsan lobortis. Fringilla sodales nam; ut curae
-              scelerisque habitant quis. Maecenas vel volutpat porta senectus
-              ullamcorper.
+              Understanding customers&apos; real sentiments about your brand and
+              product, identifying market gaps, measuring your employees&apos;
+              engagement levels and demystifying market trends.
             </p>
 
             <p className="mb-2.5">
-              Venenatis parturient tortor natoque felis donec hac ultricies ac.
-              Rhoncus nisi ante magna enim suspendisse aenean duis. Ipsum arcu
-              sollicitudin metus semper massa blandit ullamcorper phasellus.
+              We help you unearth &apos;the how&apos;, &apos;the why&apos; and
+              explore the possibilities of &apos;what next&apos;.
             </p>
 
             <p className="mb-5">
-              Sociosqu eleifend senectus eget vivamus et dis nostra curabitur.
-              Senectus magna platea sociosqu, nisl quis ac aliquet. Eleifend
-              lacus laoreet amet arcu accumsan placerat curabitur massa.
+            Our depth of experience, robust operational structure and strength of international network allows us to conduct research across the African continent whilst maintaining our track record of producing quality and accurate data to support our partners&apos; decision making.
             </p>
           </div>
 
@@ -78,7 +74,6 @@ export default function Page() {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </>
