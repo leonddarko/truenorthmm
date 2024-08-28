@@ -72,7 +72,7 @@ export default function Page() {
             archival format with the benefit of self- analysis.
           </p>
 
-          <Dot size={50} className="text-green-800 my-2.5 mx-auto" />
+          <Dot size={50} className=" text-army-green my-2.5 mx-auto" />
 
           <h2 className="text-black text-xl md:text-2xl font-notoserif font-bold max-w-2xl mx-auto text-center">
             Our mission is to create the hub/repertoire of CREDIBLE, PROMPT,

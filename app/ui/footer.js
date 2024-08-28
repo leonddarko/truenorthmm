@@ -59,7 +59,7 @@ export default function Footer() {
         <div className="flex justify-between items-center gap-5">
           {socialicons.map((item) => (
             <div key={item.id}>
-              <i className={`${item.icon} text-green-800 text-sm`}></i>
+              <i className={`${item.icon} text-army-green text-sm`}></i>
             </div>
           ))}
         </div>

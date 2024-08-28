@@ -1,4 +1,4 @@
-import { ChevronRight, CircleDot, Dot, Link2, MapPinCheck } from "lucide-react";
+import { ChevronRight, CircleDot, Dot, Link2, MapPinCheck, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -79,6 +79,7 @@ export default function Home() {
   ];
   return (
     <>
+      {/* Header */}
       <div
         className="px-6 md:px-16 pb-16 h-screen flex justify-start items-end z-0 bg-black
       bg-[url('/assets/mediamonitoringbg.jpeg')] bg-no-repeat bg-cover bg-top rounded-b-3xl shadow"
@@ -92,7 +93,9 @@ export default function Home() {
           </p>
         </div>
       </div>
+      {/* Header */}
 
+      {/* Brands  */}
       <div className="px-6 md:px-16 py-8">
         <h2 className="font-notoserif text-black/30 text-xl font-medium text-center pb-2">
           Brands That Trust Us
@@ -128,13 +131,15 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Brands  */}
 
+      {/* Services  */}
       <div className="px-6 md:px-16 pb-10">
-        <h2 className=" text-black/50 font-notoserif font-bold text-3xl m-auto text-center max-w-md">
+        <h2 className=" text-army-green font-notoserif font-bold text-3xl m-auto text-center max-w-md">
           Unlocking insights and driving growth through data-driven solutions.
         </h2>
 
-        <div className="flex my-10 justify-center gap-6 flex-wrap">
+        <div className="flex my-10 justify-between gap-6 flex-wrap">
           {services.map((item) => (
             <div
               key={item.id}
@@ -156,8 +161,8 @@ export default function Home() {
                   </p>
                 ))}
                 <Link href={item.link}>
-                  <div className="absolute top-5 -left-3 p-2 rounded-full bg-white hover:bg-zinc-200 shadow -rotate-3">
-                    <Link2 size={20} className="text-green-800" />
+                  <div className="absolute top-5 -right-5 p-2 rounded-full bg-white hover:bg-zinc-200 shadow -rotate-3">
+                    <SquareArrowOutUpRight size={20} className=" text-army-green" />
                   </div>
                 </Link>
               </div>
@@ -165,17 +170,18 @@ export default function Home() {
           ))}
         </div>
       </div>
+      {/* Services  */}
 
       <div className="px-6 md:px-16 py-10">
         <div className="flex justify-start items-center gap-3">
           <div className="p-3 rounded-full bg-zinc-200 shadow">
             {/* <div className="w-1.5 h-1.5 rounded-full bg-green-800 transition ease-in" /> */}
-            <MapPinCheck size={15} className="text-green-800" />
+            <MapPinCheck size={15} className="text-army-green" />
           </div>
-          <span className="text-black font-notoserif font-bold">
+          <span className=" text-black/50 font-notoserif font-semibold">
             Media Monitoring Coverage
           </span>
-          <ChevronRight size={15} className="text-zinc-400" />
+          <ChevronRight size={15} className="text-army-green" />
         </div>
         <div className="mt-5 flex flex-wrap justify-around items-center gap-5">
           <h1 className=" font-notoserif font-bold text-4xl md:text-5xl text-black">
@@ -190,11 +196,11 @@ export default function Home() {
             alt="Map of Africa"
           />
         </div>
-        <div className="my-5 flex flex-wrap justify-start items-center gap-5">
+        <div className="my-5 flex flex-wrap justify-start items-center gap-4">
           {coverage.map((item) => (
             <div key={item.id} className="flex items-center gap-2">
               <div className="p-2 rounded-full bg-zinc-200 shadow">
-                <div className="w-1 h-1 rounded-full bg-green-800 transition ease-in" />
+                <div className="w-1 h-1 rounded-full bg-army-green transition ease-in" />
               </div>
               <span className="text-black text-sm font-notosans font-medium">
                 {item.country}
