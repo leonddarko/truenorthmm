@@ -45,11 +45,11 @@ export default function NavigationBar() {
       path: "/contact-us",
       link: "Contact Us",
     },
-    {
-      id: 4,
-      path: "",
-      link: "Blog",
-    },
+    // {
+    //   id: 4,
+    //   path: "",
+    //   link: "Blog",
+    // },
   ];
   return (
     <>

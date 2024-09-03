@@ -5,7 +5,8 @@ import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <div className="mt-20 px-6 md:px-16 py-10">
+      <div className="mt-20 w-full h-72 bg-[url('/assets/mediamonitoringbg.jpeg')] bg-no-repeat bg-cover bg-center shadow" />
+      <div className="px-6 md:px-16 py-10">
         <div className="breadcrumbs text-sm">
           <ul className="text-black">
             <li>
@@ -21,7 +22,8 @@ export default function Page() {
           </ul>
         </div>
         <div className="md:px-16 text-center">
-          <Users2 size={15} className="text-black/50 m-auto" />
+          <i className="fa fa-users text-black m-auto"></i>
+          {/* <Users2 size={15} className="text-black/50 m-auto" /> */}
           <h1 className="font-notoserif font-bold text-black text-5xl">
             Meet Our Team
           </h1>
@@ -35,7 +37,7 @@ export default function Page() {
 
           <div className="my-10">
             <Image
-              className="rounded shadow-lg m-auto"
+              className="rounded-full shadow-lg m-auto"
               src="/assets/team/akinwale.png"
               alt="Maverick Research Logo"
               width={250}
