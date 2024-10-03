@@ -139,7 +139,7 @@ export default function Home() {
           Unlocking insights and driving growth through data-driven solutions.
         </h2>
 
-        <div className="flex my-10 justify-between gap-6 flex-wrap">
+        <div className="flex flex-col items-center md:flex-row justify-center flex-wrap gap-6 my-10">
           {services.map((item) => (
             <div
               key={item.id}
@@ -173,7 +173,7 @@ export default function Home() {
       {/* Services  */}
 
       <div className="px-6 md:px-16 py-10">
-        <div className="flex justify-start items-center gap-3">
+        <div className="flex justify-start items-center gap-3 mb-10">
           <div className="p-3 rounded-full bg-zinc-200 shadow">
             {/* <div className="w-1.5 h-1.5 rounded-full bg-green-800 transition ease-in" /> */}
             <MapPinCheck size={15} className="text-army-green" />
@@ -183,6 +183,20 @@ export default function Home() {
           </span>
           <ChevronRight size={15} className="text-army-green" />
         </div>
+
+        <div className="my-5 flex flex-wrap justify-center items-center gap-4">
+          {coverage.map((item) => (
+            <div key={item.id} className="flex items-center gap-2">
+              <div className="p-2 rounded-full bg-zinc-200 shadow">
+                <div className="w-1 h-1 rounded-full bg-army-green transition ease-in" />
+              </div>
+              <span className="text-black text-sm font-notosans font-medium">
+                {item.country}
+              </span>
+            </div>
+          ))}
+        </div>
+
         <div className="mt-5 flex flex-wrap justify-around items-center gap-5">
           <h1 className=" font-notoserif font-bold text-4xl md:text-5xl text-black">
             Our <br /> Media Monitoring
@@ -195,18 +209,6 @@ export default function Home() {
             height={700}
             alt="Map of Africa"
           />
-        </div>
-        <div className="my-5 flex flex-wrap justify-start items-center gap-4">
-          {coverage.map((item) => (
-            <div key={item.id} className="flex items-center gap-2">
-              <div className="p-2 rounded-full bg-zinc-200 shadow">
-                <div className="w-1 h-1 rounded-full bg-army-green transition ease-in" />
-              </div>
-              <span className="text-black text-sm font-notosans font-medium">
-                {item.country}
-              </span>
-            </div>
-          ))}
         </div>
       </div>
     </>

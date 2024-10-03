@@ -82,7 +82,7 @@ export default function NavigationBar() {
           {navlinks.map((item) => (
             <div
               key={item.id}
-              className="hidden md:flex justify-center items-center gap-2 p-1 rounded-3xl"
+              className="hidden lg:flex justify-center items-center gap-2 p-1 rounded-3xl"
             >
               <div
                 className={`w-1.5 h-1.5 rounded-full bg-army-green transition ease-in ${
@@ -96,7 +96,7 @@ export default function NavigationBar() {
               </Link>
             </div>
           ))}
-          <Link className="hidden md:inline-block" href="/mmmreport">
+          <Link className="hidden lg:inline-block" href="/mmmreport">
             <span className=" font-bold text-sm font-notosans text-army-green transition-all bg-zinc-200 hover:bg-zinc-300 px-3 py-2 rounded-full shadow flex items-center gap-2">
               MM Reports
               <FileSpreadsheet size={15} />
