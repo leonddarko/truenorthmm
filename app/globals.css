@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.embla {
+    overflow: hidden;
+    max-width: 80%;
+}
+
+.embla__container {
+    display: flex;
+    gap: 5;
+}
+
+.embla__slide {
+    flex: 0 0 10%;
+}
