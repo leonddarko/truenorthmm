@@ -17,3 +17,18 @@
 .embla__slide {
     flex: 0 0 10%;
 }
+
+
+
+.embla2 {
+    overflow: hidden;
+}
+
+.embla__container2 {
+    display: flex;
+}
+
+.embla__slide2 {
+    flex: 0 0 100%;
+    min-width: 0;
+}

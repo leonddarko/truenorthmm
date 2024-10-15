@@ -3,12 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { brandImages, services, coverage } from "./lib/data";
 import EmblaCarousel from "./ui/carousel";
+import AutoEmblaCarousel from "./ui/autocarousel";
 
 export default function Home() {
   return (
     <>
       {/* Header */}
-      <div
+      {/* <div
         className="px-6 md:px-16 pb-16 h-screen flex justify-start items-end z-0 bg-black
       bg-[url('/assets/mediamonitoringbg.jpeg')] bg-no-repeat bg-cover bg-top rounded-b-3xl shadow"
       >
@@ -20,8 +21,10 @@ export default function Home() {
             Right on time, the first time.
           </p>
         </div>
-      </div>
+      </div> */}
       {/* Header */}
+
+      <AutoEmblaCarousel />
 
       {/* Brands  */}
       <div className="px-6 md:px-16 py-8">

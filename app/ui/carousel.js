@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoScroll from 'embla-carousel-auto-scroll'
 import { brandImages } from '../lib/data'
@@ -15,9 +15,14 @@ export default function EmblaCarousel() {
         }
     }, [emblaApi])
 
+    const [grab, setGrab] = useState("cursor-grab");
+
     return (
         <>
-            <div className="overflow-hidden md:max-w-7xl m-auto rounded-md p-4" ref={emblaRef}>
+            <div className={`overflow-hidden md:max-w-7xl m-auto rounded-md p-4 ${grab}`} ref={emblaRef}
+                onMouseDown={() => grab === "cursor-grab" && setGrab("cursor-grabbing")}
+                onMouseUp={() => grab === "cursor-grabbing" && setGrab("cursor-grab")}
+            >
                 <div className="flex gap-6">
                     {brandImages.map((item) => (
                         <div key={item.id} className="embla__slide">
