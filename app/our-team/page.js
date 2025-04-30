@@ -41,8 +41,8 @@ export default function Page() {
 
           <Image
             className="rounded-full m-auto z-10 relative"
-            src="/assets/team/mradams.png"
-            alt="Maverick Research Logo"
+            src="/assets/team/mradams.PNG"
+            alt="Mr Adams, Akinwale"
             width={250}
             height={250}
           />
