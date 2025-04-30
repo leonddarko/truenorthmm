@@ -52,7 +52,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="mt-10 flex flex-col md:flex-row justify-start gap-5">
+          {/* <div className="mt-10 flex flex-col md:flex-row justify-start gap-5">
             {capabilities.map((item) => (
               <div
                 key={item.id}
@@ -73,7 +73,8 @@ export default function Page() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+
         </div>
       </div>
     </>

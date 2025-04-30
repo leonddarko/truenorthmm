@@ -20,7 +20,8 @@ export default function Footer() {
     <div className="flex flex-col flex-wrap md:flex-row justify-between items-center md:items-start px-6 md:px-16 py-10 bg-black/90 gap-10">
       <div className="flex items-center">
         <div className="text-center md:text-left">
-          <div className="mb-8">
+
+          {/* <div className="mb-8">
             <p className="font-extrabold font-notoserif text-sm text-white mb-1.5">
               NEWSLETTER
             </p>
@@ -29,7 +30,6 @@ export default function Footer() {
             </p>
 
             <label className="input flex items-center gap-2 bg-white rounded-full shadow-sm">
-              {/* <Mail size={20} className="text-green-800" /> */}
               <input
                 type="text"
                 className="grow text-black"
@@ -39,7 +39,7 @@ export default function Footer() {
                 <SendHorizonal size={15} />
               </button>
             </label>
-          </div>
+          </div> */}
 
           <p className="font-bold font-notoserif text-md text-white">
             TRUE NORTH MEDIA <br /> MONITORING LTD

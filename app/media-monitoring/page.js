@@ -70,10 +70,10 @@ export default function Page() {
               their media strategies.
             </p>
 
-            <button className="btn-sm bg-army-green rounded-full transition ease-in-out font-notosans font-semibold text-white flex items-center gap-2 shadow-sm">
+            {/* <button className="btn-sm bg-army-green rounded-full transition ease-in-out font-notosans font-semibold text-white flex items-center gap-2 shadow-sm">
               Book A Demo
               <ChevronRight size={15} className=" text-white" />
-            </button>
+            </button> */}
           </div>
 
           <div className="mt-10 flex flex-col md:flex-row justify-start gap-5">

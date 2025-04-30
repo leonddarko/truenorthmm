@@ -25,7 +25,7 @@ export default function EmblaCarousel() {
             >
                 <div className="flex gap-6">
                     {brandImages.map((item) => (
-                        <div key={item.id} className="embla__slide">
+                        <div key={item.id} className="embla__slide flex justify-center items-center">
                             <Image
                                 src={`/assets/brands/${item.image}`}
                                 width={80}

@@ -59,15 +59,15 @@ export default function NavigationBar() {
           <div className="flex items-center gap-0.5">
             <Link href="/" className="flex items-center gap-0.5">
               <Image
-                src="/TrueNorthLogoSq1.jpg"
+                src="/TrueNorthLogoSq.jpg"
                 alt="Maverick Research Logo"
                 width={50}
                 height={50}
               />
 
-              <span className="font-extrabold font-notoserif text-md text-black">
+              {/* <span className="font-extrabold font-notoserif text-md text-black">
                 TRUENORTH
-              </span>
+              </span> */}
             </Link>
           </div>
           {socialicons.map((item) => (
@@ -85,9 +85,8 @@ export default function NavigationBar() {
               className="hidden lg:flex justify-center items-center gap-2 p-1 rounded-3xl"
             >
               <div
-                className={`w-1.5 h-1.5 rounded-full bg-army-green transition ease-in ${
-                  pathname === item.path ? "block" : "hidden"
-                }`}
+                className={`w-1.5 h-1.5 rounded-full bg-army-green transition ease-in ${pathname === item.path ? "block" : "hidden"
+                  }`}
               />
               <Link href={item.path}>
                 <span className=" font-bold text-sm font-notosans text-zinc-700 hover:text-army-green transition-all">
@@ -96,13 +95,14 @@ export default function NavigationBar() {
               </Link>
             </div>
           ))}
-          <Link className="hidden lg:inline-block" href="/mmmreport">
+          {/* <Link className="hidden lg:inline-block btn-disabled" href="/mmmreport">
             <span className=" font-bold text-sm font-notosans text-army-green transition-all bg-zinc-200 hover:bg-zinc-300 px-3 py-2 rounded-full shadow flex items-center gap-2">
               MM Reports
               <FileSpreadsheet size={15} />
             </span>
-          </Link>
+          </Link> */}
           {/* Navigation Links */}
+
           <div className="dropdown dropdown-end p-0">
             <div
               tabIndex={0}
@@ -126,9 +126,8 @@ export default function NavigationBar() {
                     className=" font-notosans font-bold text-zinc-700 hover:bg-army-green/5 hover:text-army-green flex items-center"
                   >
                     <div
-                      className={`w-1.5 h-1.5 rounded-full bg-army-green transition ease-in ${
-                        pathname === item.path ? "block" : "hidden"
-                      }`}
+                      className={`w-1.5 h-1.5 rounded-full bg-army-green transition ease-in ${pathname === item.path ? "block" : "hidden"
+                        }`}
                     />
                     {item.link}
                   </Link>
@@ -136,6 +135,7 @@ export default function NavigationBar() {
               ))}
             </ul>
           </div>
+
         </div>
       </div>
       <Script src="https://kit.fontawesome.com/dcd356c426.js" />

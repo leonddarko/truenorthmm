@@ -25,6 +25,12 @@ export const brandImages = [
     { id: 23, image: "shalina.png" },
     { id: 24, image: "societegeneral.png" },
     { id: 25, image: "unilever.png" },
+    { id: 26, image: "usaembassy.png" },
+    { id: 27, image: "usaid.png" },
+    { id: 28, image: "voodoo.png" },
+    { id: 29, image: "simplyblack.png" },
+    { id: 30, image: "Princessetatie.png" },
+    { id: 31, image: "Godrey.jpg" },
 ];
 
 export const services = [
@@ -43,7 +49,7 @@ export const services = [
         id: 1,
         heading: "Audience Measurement",
         list: [
-            "Recall Measurements",
+            "Ad Recall Measurements",
             "All Media and Product survey (AMPS)",
             "TV Audience Measurement (TAM)",
             "Radio Audience Measurement (RAM)",

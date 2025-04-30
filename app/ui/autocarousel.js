@@ -17,14 +17,20 @@ export default function AutoEmblaCarousel() {
     const autoPlaySlideContent = [{
         id: 0,
         bImage: "bg-[url('/assets/focused_group_1.0.jpeg')]",
+        heading: "Monitoring. Evaluation and Measurement",
+        subheading: "Right on time, the first time."
     },
     {
         id: 1,
         bImage: "bg-[url('/assets/Duo_focused.jpeg')]",
+        heading: "Global Technology-oriented Media Monitoring",
+        subheading: "Harnessing the power of Artificial Intelligence and other cutting-edge technologies "
     },
     {
         id: 2,
         bImage: "bg-[url('/assets/mediamonitoringbg.jpeg')]",
+        heading: "Real-Time Insights for Your Business",
+        subheading: "Providing you with measurable results on the go"
     }
     ]
 
@@ -43,14 +49,14 @@ export default function AutoEmblaCarousel() {
                             <div
                                 className={`px-6 md:px-16 h-screen flex justify-start items-end z-0 bg-black 
                                     ${item.bImage}
-                                    bg-no-repeat bg-cover bg-top rounded-3xl shadow`}
+                                    bg-no-repeat bg-cover bg-top rounded-3xl shadow `}
                             >
-                                <div className="mb-28">
+                                <div className="mb-28 ">
                                     <h1 className="text-white font-notoserif text-4xl md:text-6xl font-bold max-w-3xl">
-                                        Monitoring. Evaluation and Measurement.
+                                        {item.heading}
                                     </h1>
                                     <p className="text-white font-notosans font-medium">
-                                        Right on time, the first time.
+                                        {item.subheading}
                                     </p>
                                 </div>
                             </div>

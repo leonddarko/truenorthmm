@@ -29,7 +29,7 @@ export default function Page() {
             </h1>
           </div>
 
-          <div className="my-5 max-w-4xl font-notosans font-normal text-black/70">
+          {/* <div className="my-5 max-w-4xl font-notosans font-normal text-black/70">
             <p className="mb-2.5">
               Lorem ipsum odor amet, consectetuer adipiscing elit. Velit neque
               diam lobortis accumsan lobortis. Fringilla sodales nam; ut curae
@@ -48,7 +48,7 @@ export default function Page() {
               Senectus magna platea sociosqu, nisl quis ac aliquet. Eleifend
               lacus laoreet amet arcu accumsan placerat curabitur massa.
             </p>
-          </div>
+          </div> */}
 
           <div className="mt-10 flex flex-col md:flex-row justify-start gap-5">
             {capabilities.map((item) => (
