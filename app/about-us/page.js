@@ -41,7 +41,7 @@ export default function Page() {
         <div className="md:px-32 text-center">
           <Image
             className=" m-auto"
-            src="/TrueNorthLogoSq1.jpg"
+            src="/TrueNorthLogoSq.jpg"
             alt="Maverick Research Logo"
             width={30}
             height={30}
