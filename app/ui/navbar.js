@@ -88,8 +88,11 @@ export default function NavigationBar() {
                 className={`w-1.5 h-1.5 rounded-full bg-army-green transition ease-in ${pathname === item.path ? "block" : "hidden"
                   }`}
               />
-              <Link href={item.path}>
-                <span className=" font-bold text-sm font-notosans text-zinc-700 hover:text-army-green transition-all">
+              <Link href={item.path} className="text-zinc-400">
+                <span className={`
+                ${pathname === item.path ? "text-army-green" : ""}
+                font-bold text-sm font-notosans  hover:text-army-green transition-all
+                `}>
                   {item.link}
                 </span>
               </Link>
@@ -123,13 +126,19 @@ export default function NavigationBar() {
                 <li key={item.id}>
                   <Link
                     href={item.path}
-                    className=" font-notosans font-bold text-zinc-700 hover:bg-army-green/5 hover:text-army-green flex items-center"
+                    className={` text-zinc-500 hover:bg-army-green/5 hover:text-army-green flex items-center
+                    `}
                   >
                     <div
                       className={`w-1.5 h-1.5 rounded-full bg-army-green transition ease-in ${pathname === item.path ? "block" : "hidden"
                         }`}
                     />
-                    {item.link}
+                    <span className={`
+                    ${pathname === item.path ? "text-army-green" : ""}
+                    font-notosans font-bold
+                    `}>
+                      {item.link}
+                    </span>
                   </Link>
                 </li>
               ))}

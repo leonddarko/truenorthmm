@@ -43,11 +43,11 @@ export default function Page() {
             className="rounded-full m-auto z-10 relative"
             src="/assets/team/mradams.PNG"
             alt="Mr Adams, Akinwale"
-            width={250}
-            height={250}
+            width={180}
+            height={180}
           />
 
-          <div className="rounded-2xl px-16 py-32 bg-zinc-50 relative -top-24 shadow-md">
+          <div className="rounded-2xl px-8 md:px-16 py-32 bg-zinc-50 relative -top-24 shadow-md">
             <div className=" font-notoserif font-normal text-xs text-black/50">
               Managing Principal
             </div>

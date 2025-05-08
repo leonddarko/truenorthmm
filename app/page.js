@@ -1,4 +1,4 @@
-import { MapPinCheck, MoveUpRight, RadioTower, AppWindowMac, MonitorCheck, Dot, MoveRight, MonitorCog } from "lucide-react";
+import { MapPinCheck, MoveUpRight, RadioTower, AppWindowMac, MonitorCheck, Dot, MoveRight, MonitorCog, MoveDown, ChevronRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { brandImages, services, coverage } from "./lib/data";
@@ -47,7 +47,7 @@ export default function Home() {
 
       {/* Brands  */}
       <div className="px-6 md:px-16 py-8">
-        <h2 className="font-notoserif text-black/30 text-xl font-medium text-center pb-2">
+        <h2 className="font-notoserif text-black/50 font-bold text-center pb-2">
           Brands That Trust Us
         </h2>
 
@@ -99,15 +99,31 @@ export default function Home() {
       <div className="px-6 md:px-16 py-10">
         <div className="flex flex-col justify-center items-center gap-3 mb-8">
           <div className="p-3 rounded-full bg-zinc-200 shadow animate-bounce">
-            {/* <div className="w-1.5 h-1.5 rounded-full bg-green-800 transition ease-in" /> */}
-            <MapPinCheck size={15} className="text-army-green" />
+            <i className="fas fa-globe-africa text-blue-400"></i>
           </div>
-          <span className=" text-black/50 font-notoserif font-semibold">
+          <span className=" text-black/50 font-notoserif font-bold">
             Media Monitoring Coverage
           </span>
         </div>
 
         <div className="my-5 flex flex-wrap justify-center items-center gap-4 mb-8">
+          {coverage.map((item) => (
+            <div key={item.id} className="flex items-center gap-2">
+              <Image
+                className={`rounded-sm`}
+                src={`https://flagcdn.com/w40/${item.code}.png`}
+                width={20}
+                height={20}
+                alt="Country flag"
+              />
+              <span className="text-black text-sm font-notosans font-semibold">
+                {item.country}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* <div className="my-5 flex flex-wrap justify-center items-center gap-4 mb-8">
           {coverage.map((item) => (
             <div key={item.id} className="flex items-center gap-2">
               <div className="p-2 rounded-full bg-zinc-200 shadow">
@@ -118,7 +134,7 @@ export default function Home() {
               </span>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="mt-5 flex flex-wrap justify-around items-center gap-5">
           <h1 className=" font-notoserif font-bold text-4xl md:text-5xl text-black text-center md:text-left">
@@ -144,15 +160,20 @@ export default function Home() {
 
           {insightsstrategy.map((item, index) => (
             <>
-              <div key={item.id} className="flex justify-center items-center">
-                <div className="p-3 bg-army-green rounded-full flex justify-center items-center z-10">
-                  <item.icon size={20} className="text-white" />
-                </div>
-                <div className=" flex justify-center items-center text-center relative right-4 text-xl shadow-sm bg-zinc-50 text-black font-notosans font-medium max-w-52 h-62 p-6 rounded-2xl">
-                  {item.strategy}
+              <div key={item.id} className="flex flex-col md:flex-row justify-center items-center gap-4">
+                <div className="flex justify-center items-center">
+                  <div className="p-3 bg-army-green rounded-full flex justify-center items-center z-10">
+                    <item.icon size={20} className="text-white" />
+                  </div>
+                  <div className=" flex justify-center items-center text-center relative right-4 text-xl shadow-sm bg-zinc-50 text-black font-notoserif font-medium max-w-52 h-62 p-6 rounded-2xl">
+                    {item.strategy}
+                  </div>
                 </div>
                 {index !== insightsstrategy.length - 1 && (
-                    <MoveRight size={30} className="text-black" />
+                  <>
+                    <ChevronRight size={25} className="text-black/60 hidden md:block" />
+                    <ChevronDown size={25} className="text-black/60 md:hidden" />
+                  </>
                 )}
               </div>
             </>
