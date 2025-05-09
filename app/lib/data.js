@@ -44,6 +44,7 @@ export const services = [
             "1000+ Radio & TV Stations Monitored Daily",
         ],
         link: "/media-monitoring",
+        bgimage: "bg-[url('/assets/Duo_focused.jpeg')]"
     },
     {
         id: 1,
@@ -55,6 +56,7 @@ export const services = [
             "Radio Audience Measurement (RAM)",
         ],
         link: "/audience-measurement",
+        bgimage: "bg-[url('/assets/focused_group_1.0.jpeg')]"
     },
     {
         id: 2,
@@ -66,6 +68,7 @@ export const services = [
             "Usage and Attitude Studies",
         ],
         link: "/consumer-journeys",
+        bgimage: "bg-[url('/assets/mediamonitoringbg.jpeg')]"
     },
 ];
 

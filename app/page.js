@@ -46,7 +46,7 @@ export default function Home() {
       <AutoEmblaCarousel />
 
       {/* Brands  */}
-      <div className="px-6 md:px-16 py-8">
+      <div className="px-6 md:px-16 py-8" id="down">
         <h2 className="font-notoserif text-black/50 font-bold text-center pb-2">
           Brands That Trust Us
         </h2>
@@ -67,7 +67,7 @@ export default function Home() {
           {services.map((item) => (
             <Link key={item.id} href={item.link}>
               <div
-                className=" relative rounded-xl shadow-md bg-[url('/assets/mediamonitoringbg.jpeg')] bg-no-repeat bg-cover bg-bottom border hover:-rotate-3 transition-all"
+                className={`relative rounded-xl shadow-md ${item.bgimage} bg-no-repeat bg-cover bg-bottom border hover:-rotate-3 transition-all`}
               >
                 {/* border border-l-green-800 */}
                 <div className="rounded-t-lg p-5 bg-white/85">
@@ -90,15 +90,15 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-
           ))}
+
         </div>
       </div>
       {/* Services  */}
 
       <div className="px-6 md:px-16 py-10">
         <div className="flex flex-col justify-center items-center gap-3 mb-8">
-          <div className="p-3 rounded-full bg-zinc-200 shadow animate-bounce">
+          <div className="p-3 rounded-full bg-zinc-200 shadow">
             <i className="fas fa-globe-africa text-blue-400"></i>
           </div>
           <span className=" text-black/50 font-notoserif font-bold">

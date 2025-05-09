@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
+import { MoveDown } from 'lucide-react'
 
 export default function AutoEmblaCarousel() {
 
@@ -60,8 +61,17 @@ export default function AutoEmblaCarousel() {
                                     </p>
                                 </div>
                             </div>
+
+
                         </div>
                     ))}
+                </div>
+                <div className="flex justify-center items-center">
+                    <a href='/#down' className='animate-bounce'>
+                        <div className="px-2 py-4 rounded-full bg-zinc-200 shadow relative z-50 inline-block bottom-6">
+                            <MoveDown size={20} className="text-black" />
+                        </div>
+                    </a>
                 </div>
             </div>
         </>
